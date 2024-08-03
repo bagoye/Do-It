@@ -34,8 +34,7 @@
 ## 폴더 구조
 
 - `src/app`: Next.js 앱 디렉토리 및 페이지 컴포넌트
-- `src/components/common`: 재사용 가능한 공용 컴포넌트
-- `src/components/todo`: To-Do 관련 컴포넌트
+- `src/components`: To-Do 관련 컴포넌트
 - `src/styles`: 글로벌 스타일 및 테마 설정
 - `src/utils`: API 호출 관련 함수
 - `src/types.ts`: 타입 정의 파일
