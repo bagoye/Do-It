@@ -54,6 +54,8 @@ const CheckListDetail: FC<CheckListDetailProps> = ({
     onUpdate({ isCompleted: !item.isCompleted });
   };
 
+  const hasData = memo || imageUrl || selectedFile;
+
   return (
     <div className="checklist-detail">
       <div className="task-name-section">
@@ -90,7 +92,7 @@ const CheckListDetail: FC<CheckListDetailProps> = ({
         </div>
       </div>
       <div className="action-buttons">
-        <img src="/edit.png" alt="수정 완료" onClick={handleSave} />
+        <img src={hasData ? "/edit1.png" : "/edit.png"} alt="수정 완료" onClick={handleSave} />
         <img src="/delete.png" alt="삭제하기" onClick={onDelete} />
       </div>
     </div>

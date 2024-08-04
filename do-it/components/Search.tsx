@@ -30,6 +30,8 @@ const Search: FC<{ onAdd: (name: string) => void; hasItems: boolean }> = ({
     }
   };
 
+  const buttonStyle = hasItems ? {} : { backgroundColor: 'rgba(124, 58, 237, 1)', color: '#FFFFFF' };
+
   return (
     <form className="search-container" onSubmit={handleSubmit(onSubmit)}>
       <input
@@ -38,7 +40,7 @@ const Search: FC<{ onAdd: (name: string) => void; hasItems: boolean }> = ({
         className="search-input"
         {...register("name", { required: true })}
       />
-      <button type="submit" className="add-button">
+      <button type="submit" className="add-button" style={buttonStyle}>
         + 추가하기
       </button>
     </form>
